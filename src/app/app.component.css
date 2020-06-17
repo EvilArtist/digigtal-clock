@@ -107,9 +107,12 @@ p {
   transform: rotate(-90deg) ;
 }
 
-#hr,
-#mm, 
-#ss{
+#h-keeper,
+#m-keeper, 
+#s-keeper,
+#h-keeper-shadow,
+#m-keeper-shadow,
+#s-keeper-shadow{
   width: 100%;
   height: 100%;
   align-content: center;
@@ -118,51 +121,51 @@ p {
   top:0;
   left: 0;
 }
-#h-keeper,
-#m-keeper, 
-#s-keeper{
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -100%);
-  border-radius: 8px;
-  background: #ccc;
-}
 
-#h-keeper{
-  width: 15px;
-  height: 22%;
-}
-#m-keeper{
-  width: 10px;
-  height: 30%;
-}
-
-#s-keeper{
-  width: 5px;
-  height: 35%;
-}
 #h-keeper::after,
 #m-keeper::after,
-#s-keeper-shadow{
+#s-keeper::after,
+#h-keeper-shadow::after,
+#m-keeper-shadow::after,
+#s-keeper-shadow::after{
+  content: '';
   background:transparent;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -100%);
+  background: #b0b0b0;
+}
+#h-keeper-shadow,
+#m-keeper-shadow,
+#s-keeper-shadow{
+  left: 4px;
+  top: 4px;
+  background: transparent;
+}
+
+#h-keeper-shadow::after,
+#m-keeper-shadow::after,
+#s-keeper-shadow::after{
+  filter: blur(3px);
+  background: #bbb;
+}
+
+#h-keeper::after,
+#h-keeper-shadow::after{
+  border-radius: 8px;
+  width: 15px;
+  height: 22%;
+}
+#m-keeper::after,
+#m-keeper-shadow::after{
+  border-radius: 5px;
+  width: 10px;
+  height: 30%;
+}
+#s-keeper::after,
+#s-keeper-shadow::after{
+  border-radius: 3px;
   width: 5px;
   height: 35%;
-}
-#h-keeper::after{
-  box-shadow: 4px 4px 2px #c0c0c0;
-  border-radius: 8px;
-}
-#m-keeper::after{
-  box-shadow: 6px 6px 3px #c0c0c0;
-  border-radius: 8px;
-}
-#s-keeper-shadow{
-  box-shadow: 8px 8px 5px #c0c0c0;
-  border-radius: 8px;
 }

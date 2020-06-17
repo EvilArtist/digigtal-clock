@@ -8,17 +8,18 @@
       </ng-template>
     </div>
   </div>
-  <div id="hr" [style.transform]="'rotate(' + degreeOfHour + 'deg)'">
-    <div id="h-keeper"></div>
-    <div id="h-keeper-shadow"></div>
+  
+  <div id="h-keeper-shadow" [style.transform]="'rotate(' + degreeOfHour + 'deg)'">
   </div>
-  <div id="mm" [style.transform]="'rotate(' + degreeOfMinute + 'deg)'">
-    <div id="m-keeper"></div>
-    <div id="m-keeper-shadow"></div>
+  <div id="h-keeper" [style.transform]="'rotate(' + degreeOfHour + 'deg)'">
   </div>
-  <div id="ss" [style.transform]="'rotate(' + degreeOfSecond + 'deg)'">
-    <div id="s-keeper"></div>
-    <div id="s-keeper-shadow"></div>
+  <div id="m-keeper-shadow" [style.transform]="'rotate(' + degreeOfMinute + 'deg)'">
+  </div>
+  <div id="m-keeper" [style.transform]="'rotate(' + degreeOfMinute + 'deg)'">
+  </div>
+  <div id="s-keeper-shadow" [style.transform]="'rotate(' + degreeOfSecond + 'deg)'">
+  </div>
+  <div id="s-keeper" [style.transform]="'rotate(' + degreeOfSecond + 'deg)'">
   </div>
   <div class="circle"></div>
 </div>
