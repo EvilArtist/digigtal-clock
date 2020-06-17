@@ -1,0 +1,168 @@
+p {
+  font-family: Lato;
+}
+
+.clock{
+  position: relative;
+  justify-content: center;
+  width: 450px;
+  height: 450px;
+  border: 4px solid #eff0f1;
+  border-radius: 50%;
+  margin: 45px;
+  align-items: center;
+  box-shadow: 0 -15px 15px rgba(255,255,255,0.05),
+              inset 0 -15px 15px rgba(255,255,255,0.05),
+              0 15px 15px rgba(0,0,0,0.2),
+              inset 0 15px 15px rgba(0,0,0,0.2);
+  box-sizing: content-box;
+}
+
+.point-time{
+  display: inline-block;
+  font-size: 25px;
+}
+
+.point-time>div{
+  color: #c0c0c0;
+  text-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transform-origin: 50% 50%;
+  width: 100%;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.circle{
+  border-radius: 50%;
+  background: #888;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  width: 22px;
+  padding:  0;
+  height: 22px;
+  position: absolute;
+  box-shadow: 0 2px 12px #c0c0c0;
+}
+
+.point-time #h12{
+  transform: translateY(-50%) rotate(90deg) ;
+}
+
+.point-time #h1{
+  transform: translateY(-50%) rotate(120deg) ;
+}
+.point-time #h2{
+  transform: translateY(-50%) rotate(150deg) ;
+}
+.point-time #h3{
+  transform: translateY(-50%) rotate(180deg) ;
+}
+.point-time #h4{
+  transform: translateY(-50%) rotate(210deg) ;
+}
+.point-time #h5{
+  transform: translateY(-50%) rotate(240deg) ;
+}
+.point-time #h6{
+  transform: translateY(-50%) rotate(-90deg) ;
+}
+.point-time #h7{
+  transform: translateY(-50%) rotate(-60deg) ;
+}
+.point-time #h8{
+  transform: translateY(-50%) rotate(-30deg) ;
+}
+.point-time #h10{
+  transform: translateY(-50%) rotate(30deg) ;
+}
+.point-time #h11{
+  transform: translateY(-50%) rotate(60deg) ;
+}
+
+.point-time .number{
+  width: fit-content;
+  position: relative;
+  transform-origin: 50% 50%;
+  font-size: 30px;
+  top: 0;
+  transform: translateY(-50%);
+}
+
+.point-time #h3 .number{
+  transform: rotate(180deg);
+}
+.point-time #h6 .number{
+  transform: rotate(90deg) ;
+}
+
+.point-time #h9 .number{
+  transform: rotate(0deg);
+}
+.point-time #h12 .number{
+  transform: rotate(-90deg) ;
+}
+
+#hr,
+#mm, 
+#ss{
+  width: 100%;
+  height: 100%;
+  align-content: center;
+  position: absolute; 
+  box-sizing: border-box;
+  top:0;
+  left: 0;
+}
+#h-keeper,
+#m-keeper, 
+#s-keeper{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  border-radius: 8px;
+  background: #ccc;
+}
+
+#h-keeper{
+  width: 15px;
+  height: 22%;
+}
+#m-keeper{
+  width: 10px;
+  height: 30%;
+}
+
+#s-keeper{
+  width: 5px;
+  height: 35%;
+}
+#h-keeper::after,
+#m-keeper::after,
+#s-keeper-shadow{
+  background:red;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  width: 5px;
+  height: 35%;
+}
+#h-keeper::after{
+  box-shadow: 4px 4px 2px #c0c0c0;
+  border-radius: 8px;
+}
+#m-keeper::after{
+  box-shadow: 6px 6px 3px #c0c0c0;
+  border-radius: 8px;
+}
+#s-keeper-shadow{
+  box-shadow: 8px 8px 5px #c0c0c0;
+  border-radius: 8px;
+}
